@@ -18,7 +18,6 @@ interface AbilityObject {
     };
 }
 
-
 export default async function PokemonPage({ params }: { params: { pokemonName: string } }) {
     // Destructure the parameter object to get the pokemonName
     const { pokemonName } = params;
@@ -84,7 +83,8 @@ export default async function PokemonPage({ params }: { params: { pokemonName: s
                                                 margin: '0 2px',
                                                 minWidth: '90px',
                                                 minHeight: '22px',
-                                                fontFamily: 'Flexo-Medium, Arial, sans-serif'
+                                                fontWeight: 'bold',
+                                                fontFamily: 'Arial, sans-serif'
                                             }}
                                             disabled
                                         >
@@ -113,7 +113,7 @@ export default async function PokemonPage({ params }: { params: { pokemonName: s
                         <tr>
                             <th>Abilities</th>
                             <td>
-                                {/* Flex container for abilities */}
+                                {/* Container for abilities */}
                                 <div className="flex">
                                     {[...Array(2)].map((_, rowIndex) => (
                                         <ul key={rowIndex} className="mr-3">

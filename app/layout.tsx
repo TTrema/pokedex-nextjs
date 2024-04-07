@@ -19,11 +19,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Head section */}
-      <Head>
-        <meta name="viewport" content="initial-scale=1.9" />
-        <link href="https://db.onlinewebfonts.com/c/d2d21cf0ee4c1d969d8a4dccc587ab26?family=Flexo-Medium" rel="stylesheet" />
-      </Head>
       {/* Body section */}
       <body className={inter.className}>
         {/* ThemeProvider for managing theme */}

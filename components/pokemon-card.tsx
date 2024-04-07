@@ -29,7 +29,7 @@ export function PokemonCard({ name, url }: PokemonCardProps) {
       {/* Container for Pokemon ID and name */}
       <div className="flex flex-col items-center">
         <h2 className={styles.cardId}>{`#${id.toString().padStart(4, "0")}`}</h2>
-        <h2 className={styles.cardName}>
+        <h2 className={`${styles.cardName} ${name === 'crabominable' ? styles.smallText : ''}`}>
           {name.split('-')[0].charAt(0).toUpperCase() + name.split('-')[0].slice(1)}
         </h2>
       </div>

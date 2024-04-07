@@ -11,12 +11,12 @@ interface PokemonGridProps {
     pokemonList: any[]; 
 }
 
-// PokemonGrid functional component
+
 export function PokemonGrid({ pokemonList }: PokemonGridProps) {
     // State for managing search text
     const [searchText, setSearchText] = useState("");
     // State for managing the count of visible Pokemon
-    const [visiblePokemonCount, setVisiblePokemonCount] = useState(100); // Initial count of visible Pokemon
+    const [visiblePokemonCount, setVisiblePokemonCount] = useState(50); // Initial count of visible Pokemon
 
     // Filter the Pokemon list based on search text
     const filteredPokemonList = pokemonList.filter(
