@@ -1,0 +1,43 @@
+.tableContainer {
+    width: 90%;
+    overflow-x: auto;
+    max-width: 600px;
+       
+  }
+ 
+  .tableContainer h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}  
+
+  .table {
+    border-collapse: collapse;
+    width: 98%;
+    
+  }
+  
+  .table th,
+  .table td {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 2px;
+  }
+  
+  .table th {
+    text-align: right;
+    padding-right: 10px;
+  
+  }
+  
+.statName{
+    width: 110px; 
+    text-align: right;
+  }
+.statValue{
+    width: 50px;
+    text-align: center; 
+  }
+
+.progress{
+
+  }
