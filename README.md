@@ -23,11 +23,24 @@ A aplicação pode ser completamente testada através do link:
 
 ### [🔗 **Pokédex Nextjs**](https://pokedex-ttrema-tremas-projects.vercel.app/?_vercel_share=VTK78ddSechFYFnPBV6Oh93YaaNb5XbK)
 
-
-
 ## Instruções de uso local
 
 ### 1- Baixe os arquivos com o comando:
 
     git clone https://github.com/TTrema/pokedex-nextjs.git
 
+### 2- Navegue até o diretório do projeto:
+
+    cd pokedex-nextjs
+
+### 3- Instale as dependências:
+
+    npm install
+
+### 4- Execute a aplicação:
+
+    npm run dev
+   
+### 5- Acesse o endereço mostrado, geralmente é:
+
+    http://localhost:3000
