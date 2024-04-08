@@ -155,16 +155,30 @@ export default async function PokemonPage({ params }: { params: { pokemonName: s
             <div>
                 <h2 className="text-xl font-bold mt-4">Moves</h2>
                 <table className={styles.table}>
-                    <tbody>
-                        {[0, 2, 4, 6, 8, 10].map((startIndex, rowIndex) => (
+                <tbody>
+                    {[0, 2, 4, 6, 8, 10].map((startIndex, rowIndex) => {
+                        // Check if both moves exist
+                        const move1Exists = pokemonObject.moves[startIndex];
+                        const move2Exists = pokemonObject.moves[startIndex + 1];
+
+                        // Render the table row only if at least one move exists
+                        if (move1Exists || move2Exists) {
+                        return (
                             <tr key={rowIndex}>
-                                {[startIndex, startIndex + 1].map((moveIndex) => (
-                                    <td key={moveIndex}>
-                                        {pokemonObject.moves[moveIndex] && pokemonObject.moves[moveIndex].move.name.charAt(0).toUpperCase() + pokemonObject.moves[moveIndex].move.name.slice(1)}
-                                    </td>
-                                ))}
+                            {[startIndex, startIndex + 1].map((moveIndex) => {
+                                const moveExists = pokemonObject.moves[moveIndex];
+                                return (
+                                <td key={moveIndex}>
+                                    {moveExists && moveExists.move.name.charAt(0).toUpperCase() + moveExists.move.name.slice(1)}
+                                </td>
+                                );
+                            })}
                             </tr>
-                        ))}
+                        );
+                        } else {
+                        return null; // If no moves exist, render nothing
+                        }
+                    })}
                     </tbody>
                 </table>
             </div>
